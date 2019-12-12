@@ -8,6 +8,8 @@ import androidx.core.app.ComponentActivity
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.util.Log
+import androidx.lifecycle.ViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import java.sql.ResultSet
 
@@ -87,9 +89,10 @@ class MainActivity : AppCompatActivity() {
         ResetBtn.setOnClickListener(){
 
         }
-
-
     }
-
-
+}
+class GameViewModel : ViewModel() {
+    init {
+        Log.i("GameViewModel", "GameViewModel created!")
+    }
 }
